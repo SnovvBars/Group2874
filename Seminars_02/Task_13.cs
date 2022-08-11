@@ -6,7 +6,7 @@
 // Перевод на международный формат представления дробных чисел
 // System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
 
-Console.WriteLine("Введите число: ");
+Console.Write("Введите число: ");
 
 // Можно вводить дробные, отрицательные числа
 // -12489,589741  -> 4
