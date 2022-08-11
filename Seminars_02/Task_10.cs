@@ -6,7 +6,6 @@
 Console.Write("Введите число: ");
 
 // 1. Вариант через математические вычисления
-
 int number = Convert.ToInt32(                   // Конвертировали в целое число
     Math.Abs(                                   // Взяли модуль
         Math.Truncate(                          // Отбросили дробную часть
@@ -20,11 +19,10 @@ int number = Convert.ToInt32(                   // Конвертировали 
 
 if (number >= 100 && number < 1000) Console.WriteLine("Вторая цифра равна: " + (number%100)/10);  // в остатке от деления на 100 нашли количество десятков
 else Console.WriteLine("Введено неправильное число, попробуйте снова.");
-
 // Конец 1го варианта 
 
 /*
-2. Вариант через массив букв строки
+// 2. Вариант через массив букв строки
 
 double number = Math.Abs(Math.Truncate(double.Parse(Console.ReadLine())));
 
