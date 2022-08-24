@@ -52,5 +52,5 @@ else                                                            // Иначе в
                                                                 // и разницы между ними
     double[] arrayMinMax = fillArray(sizeArray);                // Создали массив заданного размера
     double[] minMax = findMinMax(arrayMinMax);                  // В массив minMax записали мин и макс
-    Console.WriteLine("Разница между максимальным и минимальным значениями равна: " + diffMinMax(minMax) + "\n");
+    Console.WriteLine("Разница между максимальным и минимальным значениями равна: " + diffMinMax(minMax) + "\n");   // Вызвали метод diffMinMax разница между мин и макс значениями
 }
