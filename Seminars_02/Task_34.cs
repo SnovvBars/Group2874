@@ -5,13 +5,13 @@
 
 // Определение методов
 
-int[] fillArray(int size)              // Метод, заполняющий массив случайными числами
+int[] fillArray(int size)              // Метод, заполняющий массив случайными числами от 100 1000
 {
     int[] array = new int[size];
     Console.WriteLine("\r\nМассив:");               // Печатаем слово Массив
     for (int i = 0; i < size; i++)
     {
-        array[i] = new Random().Next(100, 999);     // Генерируем элемент массива
+        array[i] = new Random().Next(100, 1001);     // Генерируем элемент массива
         Console.Write(array[i] + " ");              // Печатаем его
     }
     Console.WriteLine("");
