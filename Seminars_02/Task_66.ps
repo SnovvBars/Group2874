@@ -1,0 +1,22 @@
+// Задача 66: Задайте значения M и N. Напишите программу, 
+// которая найдёт сумму натуральных элементов в промежутке от M до N.
+
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
+
+Console.WriteLine("");
+Console.WriteLine("Введите минимальное число M:"); 
+int m = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите максимальное число N:"); 
+int n = int.Parse(Console.ReadLine());
+
+int SumNamers(int min, int max)
+{
+    if (max == min)
+        return min;    
+    return min + SumNamers((min + 1), max);   // Рекурсия
+}
+
+// Тело программы
+int sum = SumNamers(m, n);
+Console.WriteLine($"\nСумма чисел от {m} до {n} равна: {sum} \n");
