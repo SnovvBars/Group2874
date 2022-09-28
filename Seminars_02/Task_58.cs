@@ -22,7 +22,7 @@ int[,] FillMatrix(int rows, int cols, int min, int max) // Заполняем м
 //
 void PrintMatrix(int[,] matrix) // Печатаем матрицу
 {
-    Console.WriteLine($"матрица {matrix.GetLength(0)}x{matrix.GetLength(1)}:"); // Просто инфо о размерности матрицы
+    Console.WriteLine($"{matrix.GetLength(0)}x{matrix.GetLength(1)}:"); // Просто инфо о размерности матрицы
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
@@ -32,6 +32,7 @@ void PrintMatrix(int[,] matrix) // Печатаем матрицу
         Console.WriteLine("");
     }
 }
+
 int ResNumber(int[,] matrixA, int[,] matrixB, int row, int col) // Функция перемножает матрицы построчно
 {
     int resNum = 0;
@@ -70,25 +71,29 @@ if (
     int[,] matrixB = FillMatrix(rowsMtrxB, colsMtrxB, minInterval, maxInterval); // Заполняем матрицу значениями
     Console.WriteLine(""); // Всякие красивости вывода
     Console.WriteLine("Матрица B");
-    PrintMatrix(matrixB);
+    PrintMatrix(matrixB);               // Печатаем вторую матрицу
 
-    Console.WriteLine("");
+    int sizeMatrix = rowsMtrxA;         // Размерность итоговой матрицы (равна количеству строк первой матрицы)
 
-    int[,] resMatrix = new int[colsMtrxA, rowsMtrxA];
-    for (int i = 0; i < colsMtrxA; i++)
+    int[,] resMatrix = FillMatrix(sizeMatrix, sizeMatrix, 0, 0);    // Инициируем итоговую матрицу, заполняем нулями
+
+    for (int i = 0; i < sizeMatrix; i++)                    // Заполняем итоговый массив
     {
-        for (int j = 0; j < rowsMtrxA; j++)
+        for (int j = 0; j < sizeMatrix; j++)
         {
-            resMatrix[i, j] = ResNumber(matrixA, matrixB, i, j);
+            int summ = ResNumber(matrixA, matrixB, i, j);   // Вызываем метод подсчета произведения строки матрицы А на столбец матрицы B
+            // Console.WriteLine($"Значение ячейки ({i}, {j}) равно {summ}");
+            resMatrix[i, j] = summ;
         }
     }
-    Console.WriteLine("Резульирующая");
+
+    Console.WriteLine("\nИтоговая матрица");
     PrintMatrix(resMatrix);
     Console.WriteLine("");
 }
 else
     Console.WriteLine(
-        "Произведение двух матриц АВ имеет смысл только в том случае,\n"
+        "\nПроизведение двух матриц АВ имеет смысл только в том случае,\n"
             + "когда число столбцов матрицы А совпадает с числом строк матрицы В.\n"
             + "Попробуйте снова!\n"
     );
