@@ -35,14 +35,14 @@ void PrintMatrix(int[,] matrix)                                 // Печата�
     }
 }
 // 
-int calcSum(int[,] matrix, int i)
+int CalcSum(int[,] matrix, int i)           // Вычисляет сумму элементов в передаваемой строке в переданной матрице
 {
-    int sum = 0;
+    int sum = 0;                            // Инициализируем начальную сумму
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
         sum = sum + matrix[i, j];
     }
-    return sum;
+    return sum;                             // Возвращаем результат
 }
 
 
@@ -52,7 +52,7 @@ int rowsMtrx = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите количество солбцов:");                           // Запрашиваем количество столбцов
 int colsMtrx = int.Parse(Console.ReadLine());
 
-int minInterval = 0;                                                     // Интервал значений матрицы
+int minInterval = -10;                                                     // Интервал значений матрицы
 int maxInterval = 10;
 
 int[,] intMatrix = FillMatrix(rowsMtrx, colsMtrx, minInterval, maxInterval);    // Заполняем матрицу значениями
@@ -61,14 +61,18 @@ PrintMatrix(intMatrix);
 
 Console.WriteLine("");  
 
-int findRow = minInterval;                                  // Начинаем со строки минимального значения заданного интервала (см выше)
-for (int i = 1; i < intMatrix.GetLength(0); i++)            // проходим по всем строкам
+int summmRow = CalcSum(intMatrix, 0);           // Инициализируем начальную сумму, равной сумме элеменьлов 1й строки
+int currentRow = 0;                             // Инициализируем счетчик строки, где на текущую итеррацию минимальная сумма
+                                                // элементов в строке. Начинаем с первой строки
+for (int i = 0; i < intMatrix.GetLength(0); i++)
 {
-    Console.WriteLine(i +" Текущая строка: " + findRow);    
-    int currentSum = calcSum(intMatrix, i);
-    Console.WriteLine("  Текущяя сумма: " + currentSum);
-    int prevSum = calcSum(intMatrix, i - 1);
-    Console.WriteLine("  Предыдущая: " + prevSum  + "\n");
-    if (calcSum(intMatrix, i) < calcSum(intMatrix, i - 1)) findRow = i;     // сравниваем текущу сумму сqw
+    Console.WriteLine(" Текущая строка: " + (i + 1));                       // Введена для контроля правильности подсчетов
+    Console.WriteLine(" Текущяя сумма: " + CalcSum(intMatrix, i) + "\n");   // То же
+    if (CalcSum(intMatrix, i) < summmRow)                                   // Проверяем, сумма текущей строки больше текущего значения суммы элементов?
+    {
+        summmRow = CalcSum(intMatrix, i);
+        currentRow = i;
+    }
+    else continue;
 }
-Console.WriteLine("Искомая строка: " + findRow + "\n");
+Console.WriteLine("\nСтрока с минимальной суммой элементов равна: " + (currentRow + 1) + "\n");
