@@ -18,12 +18,12 @@ def digit_check(text_invitation):             # Проверка ввода
 
 number = digit_check("\nВведите число: ")
 
-sum = 0
+summa = 0
 for i in str(number):
     if i not in (',', '.', '-'):
-        sum += int(i); 
+        summa += int(i); 
 
-print('Сумма всех цифр в числе {} равна {} \n'.format(number, sum)) 
+print('Сумма всех цифр в числе {} равна {} \n'.format(number, summa)) 
 
 # =============================================================
 
