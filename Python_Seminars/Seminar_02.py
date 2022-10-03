@@ -60,8 +60,6 @@ print ('\n {} -> {}\n'.format(number, lst))
 
 # Задача 3
 # Задайте список из n чисел, заполненный по формуле (1 + 1/n) ** n и вы ведите на экран их сумму
-# Пример:    
-# - Для n = 6: [2, 2, 2, 2, 2, 3] -> 13  насколько я понял, это округление до целых?
 
 # Решение
 
@@ -72,7 +70,7 @@ def digit_check(text_invitation):   # Проверка ввода
             num = int(input(text_invitation))
             if num > 0: 
                 success_input = False
-        except ValueError:
+        except:
             print("\nВведите корректное число!\n")
     return num
 
@@ -83,12 +81,12 @@ def f_culc(num):
     return summ
 
 number = digit_check("\nВведите целое положительное число: ")
-lst = []
 summ_lst = 0
+my_dict = {}
 for i in range(1, number + 1):
-    lst.append(int(round(f_culc(i))))
-    summ_lst += lst[i-1]
-print ('\nСумма списка из {} элементов равна: {}\n'.format(number, summ_lst))
+    my_dict[i] = round(f_culc(i), 2)
+    summ_lst += my_dict[i]
+print ('\nСумма списка \n{} \nиз {} элементов равна: \n{}\n'.format(my_dict, number, summ_lst))
 
 # =================================================================
 
