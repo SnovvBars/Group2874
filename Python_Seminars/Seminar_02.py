@@ -12,7 +12,7 @@ def digit_check(text_invitation):             # Проверка ввода
         try:
             num = float(input(text_invitation)) 
             success_input = False
-        except:
+        except ValueError:
             print("\nВведите корректное число!\n")
     return num
 
@@ -41,7 +41,7 @@ def digit_check(text_invitation):   # Проверка ввода
             num = int(input(text_invitation))
             if num > 0: 
                 success_input = False
-        except:
+        except ValueError:
             print("\nВведите корректное число!\n")
     return num
 
@@ -72,7 +72,7 @@ def digit_check(text_invitation):   # Проверка ввода
             num = int(input(text_invitation))
             if num > 0: 
                 success_input = False
-        except:
+        except ValueError:
             print("\nВведите корректное число!\n")
     return num
 
@@ -105,7 +105,7 @@ def digit_check(text_invitation):   # Проверка ввода
             num = int(input(text_invitation))
             if num > 0: 
                 success_input = False
-        except:
+        except ValueError:
             print("\nВведите корректное число!\n")
     return num
 
@@ -147,7 +147,7 @@ def digit_check(text_invitation):       # проверка ввода
             num = int(input(text_invitation))
             if num > 0: 
                 success_input = False
-        except:
+        except ValueError:
             print("\nВведите корректное число!\n")
     return num
 
