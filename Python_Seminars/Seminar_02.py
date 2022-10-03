@@ -75,10 +75,7 @@ def digit_check(text_invitation):   # Проверка ввода
     return num
 
 def f_culc(num):
-    summ = 1
-    for _ in range(num):
-        summ *= (1 + 1/num)
-    return summ
+    return (1 + 1/num)**num
 
 number = digit_check("\nВведите целое положительное число: ")
 summ_lst = 0
