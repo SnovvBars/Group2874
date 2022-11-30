@@ -1,1 +1,47 @@
+<!DOCTYPE HTML>
 
+<html>
+
+<head>
+    <title>Name</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Волгин Сергей">
+    <meta name="Publisher-Email" content="artphoto@mail.ru">
+    <script>
+        name_User = ask_name();
+
+        while (check_str(name_User)){
+            alert('Должны быть только буквы! Попробуйте снова!');
+            name_User = ask_name()
+        };
+
+        print_name(name_User);
+
+        function ask_name() {
+            var name = prompt('Введите ваше имя', 'Имя');
+            return name
+        }
+
+        function print_name(name){
+            alert('Ваше имя: '+ name)
+        }
+
+        function check_str(str) {
+            return(Number(str));
+        }
+
+    </script>
+    <style>
+        #name{
+
+        }
+
+    </style>
+</head>
+<body>
+<!-- Страница должна содержать заголовки, абзацы, картинки, списки и ссылки. -->
+    <header></header>
+    <main></main>
+    <footer></footer>
+</body>
+</html>
