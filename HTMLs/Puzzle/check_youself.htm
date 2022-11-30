@@ -1,0 +1,672 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pazzle</title>
+
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="author" content="Волгин Сергей">
+    <meta name="copyright" content="ООО Группа ЭПОС">
+    <meta name="Publisher-Email" content="info@eposgroup.ru">
+    <meta name="Publisher-URL" content="eposgroup.ru">
+	<meta name="HandheldFriendly" content="True"/>
+
+<!--    <link rel="stylesheet" href="js/owl/owl.carousel.min.css">   -->
+ 	<link rel="stylesheet" type="text/css" href="css/queryLoader.css">
+	<link rel="stylesheet" href="css/check_youself.css">
+
+
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/queryLoader.js"></script>
+    <script src="js/jquery.transit.min.js"></script>
+
+    <script src="js/hammer.js"></script>
+    <script src="js/jquery.hammer.js"></script>
+
+    <script src="js/jquery.nicescroll.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+    <script src="js/check_youself.js"></script>
+    <script src="js/redirect_timer.js"></script>
+
+
+</head>
+<body id="body">
+   <div class="load_overfow" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgb(0, 0, 0); z-index: 10000; background-repeat: no-repeat; background-position: center;"> </div>
+    <div id="com_bg" class="img_background no_resize">
+        <img src="img/bg_quest_main.jpg">
+    </div>
+
+    <aside id="header" class="font_resizble">
+        <span>проверь себя!</span>
+    </aside>
+    <aside style="clear: both"></aside>
+    <aside id="learn_more" class="font_resizble">
+        <span>Следующий вопрос</span>
+        <img src="img/arrow_quest.png">
+    </aside>
+
+    <div id="about_wrapper" class="font_resizble img_background no_resize" style="background-image: url(img/bg_quest_2.jpg);">
+<!-- Сюда вставляем правильные ответы -->
+    </div>
+
+    <div id="quest_wrapper" class="font_resizble img_background no_resize">
+        <img src="img/bg_quest.jpg">
+        <div id="quest">
+<!-- Сюда вставляем вопросы -->
+        </div>
+
+    </div>
+
+    <div id="puzzle_table">
+<!-- Сюда вставляем картинки -->
+    </div>
+
+    <a href="index.htm">
+    <div id="home">
+        <img src="img/home.png">
+    </div>
+    </a>
+
+    <div id="finger">
+        <img src="img/finger.png">
+    </div>
+    <div id="text">
+        выбери правильный ответ
+    </div>
+    <div id="paginator_wrapper">
+
+    </div>
+
+<!-- Дивы картинок -->
+<!-- 1 -->
+    <div class="hidden_pics" style="display: none" data-quest="1">
+<!-- 1 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_01_little.jpg">
+                </div>
+            </div>
+            <h1>АРХАНГЕЛЬСКИЙ СОБОР В КРЕМЛЕ</h1>
+        </div>
+<!-- 10 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_10_little.jpg">
+                </div>
+            </div>
+            <h1>ЦЕРКОВЬ ВОЗНЕСЕННИЯ ГОСПОДНЯ В КОЛОМЕНСКОМ</h1>
+        </div>
+<!-- 11 -->
+        <div class="item_click_wrapper" data-true="true">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_11_little.jpg">
+                </div>
+            </div>
+            <h1>УСПЕНСКИЙ СОБОР В КРЕМЛЕ</h1>
+        </div>
+<!-- 3 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_03_little.jpg">
+                </div>
+            </div>
+            <h1>ХРАМ ВОСКРЕСЕНИЯ ХРИСТОВА В КАДАШАХ</h1>
+        </div>
+
+    </div>
+<!-- 2 -->
+
+    <div class="hidden_pics" style="display: none" data-quest="2">
+<!-- 5 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_05_little.jpg">
+                </div>
+            </div>
+            <h1>ХРАМ ТРОИЦЫ ЖИВОНАЧАЛЬНОЙ В ОСТАНКИНЕ</h1>
+        </div>
+<!-- 13 -->
+        <div class="item_click_wrapper" data-true="true">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_13_little.jpg">
+                </div>
+            </div>
+            <h1>ЦЕРКОВЬ СВЯТОЙ ЖИВОНАЧАЛЬНОЙ ТРОИЦЫ В НИКИТНИКАХ</h1>
+        </div>
+<!-- 8 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_08_little.jpg">
+                </div>
+            </div>
+            <h1>СОБОР СВЯТИТЕЛЯ ПЕТРА, МИТРОПОЛИТА МОСКОВСКОГО</h1>
+        </div>
+<!-- 1 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_01_little.jpg">
+                </div>
+            </div>
+            <h1>АРХАНГЕЛЬСКИЙ СОБОР В КРЕМЛЕ</h1>
+        </div>
+
+
+    </div>
+
+<!-- 3 -->
+
+    <div class="hidden_pics" style="display: none" data-quest="3">
+<!-- 6 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_06_little.jpg">
+                </div>
+            </div>
+            <h1>СОБОР КАЗАНСКОЙ ИКОНЫ БОЖЬЕЙ МАТЕРИ</h1>
+        </div>
+<!-- 15 -->
+        <div class="item_click_wrapper" data-true="true">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_15_little.jpg">
+                </div>
+            </div>
+            <h1>СОБОР ПОКРОВА ПРЕСВЯТОЙ БОГОРОДИЦЫ</h1>
+        </div>
+<!-- 16 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_16_little.jpg">
+                </div>
+            </div>
+            <h1>СОБОР ХРИСТА СПАСИТЕЛЯ</h1>
+        </div>
+<!-- 2 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_02_little.jpg">
+                </div>
+            </div>
+            <h1>БЛАГОВЕЩЕНСКИЙ СОБОР В КРЕМЛЕ</h1>
+        </div>
+
+    </div>
+
+    <div class="hidden_pics" style="display: none" data-quest="4">
+ <!-- 1 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_01_little.jpg">
+                </div>
+            </div>
+            <h1>АРХАНГЕЛЬСКИЙ СОБОР В КРЕМЛЕ</h1>
+        </div>
+<!-- 10 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_10_little.jpg">
+                </div>
+            </div>
+            <h1>ЦЕРКОВЬ ВОЗНЕСЕННИЯ ГОСПОДНЯ В КОЛОМЕНСКОМ</h1>
+        </div>
+ <!-- 8 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_08_little.jpg">
+                </div>
+            </div>
+            <h1>СОБОР СВЯТИТЕЛЯ ПЕТРА, МИТРОПОЛИТА МОСКОВСКОГО</h1>
+        </div>
+<!-- 16 -->
+        <div class="item_click_wrapper" data-true="true">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_16_little.jpg">
+                </div>
+            </div>
+            <h1>СОБОР ХРИСТА СПАСИТЕЛЯ</h1>
+        </div>
+
+    </div>
+
+    <div class="hidden_pics" style="display: none" data-quest="5">
+<!-- 1 -->
+        <div class="item_click_wrapper" data-true="true">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_01_little.jpg">
+                </div>
+            </div>
+            <h1>АРХАНГЕЛЬСКИЙ СОБОР В КРЕМЛЕ</h1>
+        </div>
+<!-- 14 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_14_little.jpg">
+                </div>
+            </div>
+            <h1>ЦЕРКОВЬ ПОКРОВА ПРЕСВЯТОЙ БОГОРОДИЦЫ В ФИЛЯХ</h1>
+        </div>
+<!-- 4 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_04_little.jpg">
+                </div>
+            </div>
+            <h1>БОЛЬШОЙ СОБОР ДОНСКОЙ БОГОМАТЕРИ</h1>
+        </div>
+<!-- 6 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_06_little.jpg">
+                </div>
+            </div>
+            <h1>СОБОР КАЗАНСКОЙ ИКОНЫ БОЖЬЕЙ МАТЕРИ</h1>
+        </div>
+
+
+    </div>
+
+    <div class="hidden_pics" style="display: none" data-quest="6">
+<!-- 15 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_15_little.jpg">
+                </div>
+            </div>
+            <h1>СОБОР ПОКРОВА ПРЕСВЯТОЙ БОГОРОДИЦЫ</h1>
+        </div>
+<!-- 7 -->
+        <div class="item_click_wrapper" data-true="true" >
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_07_little.jpg">
+                </div>
+            </div>
+            <h1>ПОКРОВСКИЙ СОБОР МАРФО-МАРИИНСКОЙ ОБИТЕЛИ</h1>
+        </div>
+<!-- 11 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_11_little.jpg">
+                </div>
+            </div>
+            <h1>УСПЕНСКИЙ СОБОР В КРЕМЛЕ</h1>
+        </div>
+ <!-- 9 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_09_little.jpg">
+                </div>
+            </div>
+            <h1>СОБОР РОЖДЕСТВА ПРЕСВЯТОЙ БОГОРОДИЦЫ</h1>
+        </div>
+
+
+    </div>
+    <div class="hidden_pics" style="display: none" data-quest="7">
+<!-- 4 -->
+        <div class="item_click_wrapper" data-true="true">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_04_little.jpg">
+                </div>
+            </div>
+            <h1>БОЛЬШОЙ СОБОР ДОНСКОЙ БОГОМАТЕРИ</h1>
+        </div>
+<!-- 16 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_16_little.jpg">
+                </div>
+            </div>
+            <h1>СОБОР ХРИСТА СПАСИТЕЛЯ</h1>
+        </div>
+<!-- 8 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_08_little.jpg">
+                </div>
+            </div>
+            <h1>СОБОР СВЯТИТЕЛЯ ПЕТРА, МИТРОПОЛИТА МОСКОВСКОГО</h1>
+        </div>
+<!-- 13 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_13_little.jpg">
+                </div>
+            </div>
+            <h1>ЦЕРКОВЬ СВЯТОЙ ЖИВОНАЧАЛЬНОЙ ТРОИЦЫ В НИКИТНИКАХ</h1>
+        </div>
+
+    </div>
+    <div class="hidden_pics" style="display: none" data-quest="8">
+<!-- 15 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_15_little.jpg">
+                </div>
+            </div>
+            <h1>СОБОР ПОКРОВА ПРЕСВЯТОЙ БОГОРОДИЦЫ</h1>
+        </div>
+<!-- 2 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_02_little.jpg">
+                </div>
+            </div>
+            <h1>БЛАГОВЕЩЕНСКИЙ СОБОР В КРЕМЛЕ</h1>
+        </div>
+<!-- 1 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_01_little.jpg">
+                </div>
+            </div>
+            <h1>АРХАНГЕЛЬСКИЙ СОБОР В КРЕМЛЕ</h1>
+        </div>
+<!-- 10 -->
+        <div class="item_click_wrapper" data-true="true" >
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_10_little.jpg">
+                </div>
+            </div>
+            <h1>ЦЕРКОВЬ ВОЗНЕСЕННИЯ ГОСПОДНЯ В КОЛОМЕНСКОМ</h1>
+        </div>
+
+    </div>
+    <div class="hidden_pics" style="display: none" data-quest="9">
+<!-- 11 -->
+        <div class="item_click_wrapper" data-true="true" >
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_11_little.jpg">
+                </div>
+            </div>
+            <h1>УСПЕНСКИЙ СОБОР В КРЕМЛЕ</h1>
+        </div>
+<!-- 7 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_07_little.jpg">
+                </div>
+            </div>
+            <h1>ПОКРОВСКИЙ СОБОР МАРФО-МАРИИНСКОЙ ОБИТЕЛИ</h1>
+        </div>
+<!-- 6 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_06_little.jpg">
+                </div>
+            </div>
+            <h1>СОБОР КАЗАНСКОЙ ИКОНЫ БОЖЬЕЙ МАТЕРИ</h1>
+        </div>
+<!-- 5 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_05_little.jpg">
+                </div>
+            </div>
+            <h1>ХРАМ ТРОИЦЫ ЖИВОНАЧАЛЬНОЙ В ОСТАНКИНЕ</h1>
+        </div>
+
+    </div>
+    <div class="hidden_pics" style="display: none" data-quest="10">
+<!-- 6 -->
+        <div class="item_click_wrapper" data-true="true">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_06_little.jpg">
+                </div>
+            </div>
+            <h1>СОБОР КАЗАНСКОЙ ИКОНЫ БОЖЬЕЙ МАТЕРИ</h1>
+        </div>
+<!-- 8 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_08_little.jpg">
+                </div>
+            </div>
+            <h1>СОБОР СВЯТИТЕЛЯ ПЕТРА, МИТРОПОЛИТА МОСКОВСКОГО</h1>
+        </div>
+<!-- 12 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_12_little.jpg">
+                </div>
+            </div>
+            <h1>ХРАМ ЗНАМЕНИЯ БОГОРОДИЦЫ В ДУБРОВИЦАХ</h1>
+        </div>
+<!-- 11 -->
+        <div class="item_click_wrapper">
+            <div class="item_click_img_wrapper">
+                <div class="item_click_img img_background no_resize">
+                    <img src="img/sobors/s_11_little.jpg">
+                </div>
+            </div>
+            <h1>УСПЕНСКИЙ СОБОР В КРЕМЛЕ</h1>
+        </div>
+
+
+    </div>
+
+
+<!-- дивы правильных ответов -->
+<!-- 1 -->
+    <div class="hidden_answer" style="display: none" data-quest="1">
+        <div id="about">
+            <h1>УСПЕНСКИЙ СОБОР В КРЕМЛЕ</h1>
+            <p><b>Собор Успения Пресвятой Богородицы (Успенский собор)</b> — православный храм, расположенный на Соборной площади Кремля. Построен в 1474-1479 годах по проекту  итальянского зодчего Аристотеля Фиорованти. В росписях собор принимал участие выдающийся мастер иконописи Дионисий. В 1547 году в этом храме венчался на царство Иван IV Грозный, а в 1613 здесь проходил Земский собор, на котором царём был избран Михаил Романов.</p>
+<p>Позднее, когда столицей России стал Санкт-Петербург, в Успенском соборе по-прежнему короновались все императоры. С 1990 года в соборе возобновились богослужения по особому благословению Патриарха.</p>
+
+            <img src="img/sobors/s_11_little.jpg">
+        </div>
+        <div id="arrow_dop_panel"  class="font_resizble">
+            <span>правильный ответ</span>
+        </div>
+    </div>
+<!-- 2 -->
+    <div class="hidden_answer" style="display: none" data-quest="2">
+        <div id="about">
+            <h1>ЦЕРКОВЬ СВЯТОЙ ЖИВОНАЧАЛЬНОЙ ТРОИЦЫ В НИКИТНИКАХ</h1>
+            <p><b>Церковь Святой Живоначальной Троицы в Никитниках</b> — знаменитый памятник стиля «московского узорочья», образец для для многих храмов XVII века. Церковь построен в 1628-1653 по заказу ярославского купца Григория Никитникова. С 1654 года главная святыня храма — Грузинская икона Богоматери. В церкви сохранилась настенная роспись и иконы, созданнная мастерами Оружейной палаты Симоном Ушаковым, Иосифом Владимировым и другими. </p>
+
+            <img src="img/sobors/s_13_little.jpg">                      <!-- 2 -->
+        </div>
+        <div id="arrow_dop_panel"  class="font_resizble">
+            <span>правильный ответ</span>
+        </div>
+    </div>
+<!-- 3 -->
+    <div class="hidden_answer" style="display: none" data-quest="3">
+        <div id="about">
+                                                                        <!-- 1 -->
+            <h1>СОБОР ПОКРОВА ПРЕСВЯТОЙ БОГОРОДИЦЫ</h1>
+            <p><b>Собор Покрова Пресвятой Богородицы, что на Рву</b> — православный храм, расположенный на Красной площади в Москве. Покровский собор — одна из самых известных достопримечательностей Москвы. Собор был построен в 1555-1561 годах по повелению Ивана IV Грозного в память о победе над Казанским ханством и  взятии Казани в день праздника Покрова в 1552 году. Собор состоит из храмов, освященных в честь праздников, приходившихся на дни решающих событий Казанского похода. В 1588 к Собору была пристроена церковь Василия Блаженного, названная в честь чтимого московского юродивого. С 1991 года собор находится в совместном пользовании Исторического музея и РПЦ.</p>
+
+            <img src="img/sobors/s_15_little.jpg">                      <!-- 2 -->
+        </div>
+        <div id="arrow_dop_panel"  class="font_resizble">
+            <span>правильный ответ</span>
+        </div>
+    </div>
+
+<!-- 4 -->
+    <div class="hidden_answer" style="display: none" data-quest="4">
+        <div id="about">
+                                                                        <!-- 1 -->
+            <h1>СОБОР ХРИСТА СПАСИТЕЛЯ</h1>
+            <p><b>Кафедральный соборный храм Христа Спасителя в Москве</b> был восстановлен в 1994-1997 годах по проекту архитекторов Посохина М.М., Денисова А.М., Церетели З.К. на месте уничтоженного в 1931 году храма-памятника русским воинам, погибшим в сражениях с войсками Наполеона в Отечественной войне 1812 года. Разрушенный храм был воздвигнут в 1839-1883 годах про проекту архитектора К.А.Тона на общественные пожертвования. Стены храма были украшены горельефами на библейские и исторические сюжеты, часть из которых сохранилась на территории Донского монастыря в Москве (заменены бронзовыми фигурами мастерской Церетели З.К.)</p>
+
+            <img src="img/sobors/s_16_little.jpg">                      <!-- 2 -->
+        </div>
+        <div id="arrow_dop_panel"  class="font_resizble">
+            <span>правильный ответ</span>
+        </div>
+    </div>
+
+<!-- 5 -->
+    <div class="hidden_answer" style="display: none" data-quest="5">
+        <div id="about">
+            <h1>АРХАНГЕЛЬСКИЙ СОБОР В КРЕМЛЕ</h1>
+            <p><b>Собор Святого Архистратиха Михаила (Архангельский собор)</b> — православный храм, расположенный на Соборной площади в Кремле. Сооружен в 1505-1508 годах по проекту итальянского зодчего Алевиза Нового при Великих князьях московских и Государях Всея Руси  Иване III и Василии III. В 1508 году Василий III повелел «перенести мощи прародителей своих Великих князей Русских» в Архангельский собор. Первым здесь был похоронен Иван Калита (1340), последним — император Петр II (1730).</p>
+
+            <img src="img/sobors/s_01_little.jpg">
+        </div>
+        <div id="arrow_dop_panel"  class="font_resizble">
+            <span>правильный ответ</span>
+        </div>
+    </div>
+
+<!-- 6 -->
+    <div class="hidden_answer" style="display: none" data-quest="6">
+        <div id="about">
+                                                                        <!-- 1 -->
+            <h1>ПОКРОВСКИЙ СОБОР МАРФО-МАРИИНСКОЙ ОБИТЕЛИ</h1>
+            <p><b>Собор Покрова Богородицы  Марфо-Мариинской обители сестер милосердия</b> был возведен в 1908-1912 годах по проекту архитектора А.В.Щусева. Образцом для храма послужили средневековые церкви Новгорода и Пскова. В украшении храма приняли участие знаменитый художник М.В.Нестеров, его ученик П.Д.Корин и скульптор С.Т.Коненков. Под Покровским собором расположен храм Во Имя Сил Небесных и Всех Святых. Заново освящен в 2008 году.</p>
+
+            <img src="img/sobors/s_07_little.jpg">                      <!-- 2 -->
+        </div>
+        <div id="arrow_dop_panel"  class="font_resizble">
+            <span>правильный ответ</span>
+        </div>
+    </div>
+
+<!-- 7 -->
+    <div class="hidden_answer" style="display: none" data-quest="7">
+        <div id="about">
+                                                                        <!-- 1 -->
+            <h1>БОЛЬШОЙ СОБОР ДОНСКОЙ БОГОМАТЕРИ</h1>
+            <p><b>Большой Собор иконы Донской Божьей Матери</b> построен в Донском мужском монастыре в 1686-1698 годах. Здание собора поднято на подклете и окружено обходной галереей. Сохранился иконостас «фряжского» (живоподобного) стиля, который появился в России во второй половине XVII века под влиянием западноевропейского искусства и отличается достоверностью в передаче образов Спасителя, Богоматери и святых. В Соборе находится рака с мощами святителя Тихона, Патриарха Всероссийского.</p>
+
+            <img src="img/sobors/s_04_little.jpg">                      <!-- 2 -->
+        </div>
+        <div id="arrow_dop_panel"  class="font_resizble">
+            <span>правильный ответ</span>
+        </div>
+    </div>
+
+
+<!-- 8 -->
+    <div class="hidden_answer" style="display: none" data-quest="8">
+        <div id="about">
+                                                                        <!-- 1 -->
+            <h1>ЦЕРКОВЬ ВОЗНЕСЕННИЯ ГОСПОДНЯ В КОЛОМЕНСКОМ</h1>
+            <p><b>Церковь Вознесения Господня в Коломенском</b> — признанный шедевр мировой архитектуры, первый шатровый каменный храм в России. Возведена в 1528-1532 годах  итальянским архитектором Петром Франциском Анибале, названным Петром Фрязиным или Петром Малым в русских летописях. Храм строился для моления о чадородии великокняжеской четы Василия III и Елены Глинской. После рождения Ивана IV Грозного в храме было возведено «царское место» на белокаменном основании. Первоначальное убранство храма не сохранилось. Храм был заново освещен в 2000 году.</p>
+
+            <img src="img/sobors/s_10_little.jpg">                      <!-- 2 -->
+        </div>
+        <div id="arrow_dop_panel"  class="font_resizble">
+            <span>правильный ответ</span>
+        </div>
+    </div>
+
+<!-- 9 -->
+    <div class="hidden_answer" style="display: none" data-quest="9">
+        <div id="about">
+                                                                        <!-- 1 -->
+            <h1>УСПЕНСКИЙ СОБОР В КРЕМЛЕ</h1>
+            <p><b>Собор Успения Пресвятой Богородицы (Успенский собор)</b> — православный храм, расположенный на Соборной площади Кремля. Построен в 1474-1479 годах по проекту  итальянского зодчего Аристотеля Фиорованти. В росписях собор принимал участие выдающийся мастер иконописи Дионисий. В 1547 году в этом храме венчался на царство Иван IV Грозный, а в 1613 здесь проходил Земский собор, на котором царём был избран Михаил Романов.</p>
+<p>Позднее, когда столицей России стал Санкт-Петербург, в Успенском соборе по-прежнему короновались все императоры. С 1990 года в соборе возобновились богослужения по особому благословению Патриарха.</p>
+
+            <img src="img/sobors/s_11_little.jpg">
+        </div>
+        <div id="arrow_dop_panel"  class="font_resizble">
+            <span>правильный ответ</span>
+        </div>
+    </div>
+
+<!-- 10 -->
+    <div class="hidden_answer" style="display: none" data-quest="10">
+        <div id="about">
+                                                                        <!-- 1 -->
+            <h1>СОБОР КАЗАНСКОЙ ИКОНЫ БОЖЬЕЙ МАТЕРИ</h1>
+            <p><b>Каменный храм Казанской иконы Божьей Матери</b> на Красной площади был возведен в 1636 году на средства царя Михаила Федоровича Романова. В XVIII и XIX веках храм много раз перестраивался, а в 1936 году был снесен. В 1990-1993 годах храм был восстановлен на средства мэрии Москвы и пожертвования граждан. В храме находится особо чтимый список Казанской иконы Божьей Матери.</p>
+
+            <img src="img/sobors/s_06_little.jpg">                      <!-- 2 -->
+        </div>
+        <div id="arrow_dop_panel"  class="font_resizble">
+            <span>правильный ответ</span>
+        </div>
+    </div>
+<!-- Дивы вопростов -->
+<!-- 1 -->
+    <div class="hidden_quest" style="display: none" data-quest="1">
+            <p>1. В каком соборе венчался на царство Иван IV Грозный?</p>
+    </div>
+<!-- 2 -->
+    <div class="hidden_quest" style="display: none" data-quest="2">
+            <p>2. В какой церкви сохранились росписи знаменитого иконописца Симона Ушакова?</p>
+    </div>
+<!-- 3 -->
+    <div class="hidden_quest" style="display: none" data-quest="3">
+            <p>3. Какой собор построен в память о победе над Казанским ханством?</p>
+    </div>
+<!-- 4 -->
+    <div class="hidden_quest" style="display: none" data-quest="4">
+            <p>4. Какой собор был построен как храм-памятник русским воинам, погибшим в Отечественной войне 1812 года?</p>
+    </div>
+<!-- 5 -->
+    <div class="hidden_quest" style="display: none" data-quest="5">
+            <p>5. В каком соборе находится усыпальница Великих князей московских?</p>
+    </div>
+<!-- 6 -->
+    <div class="hidden_quest" style="display: none" data-quest="6">
+            <p>6. Какой собор был украшен художниками М.Нестеровым, П.Кориным и скульптором С.Коненковым?</p>
+    </div>
+<!-- 7 -->
+    <div class="hidden_quest" style="display: none" data-quest="7">
+            <p>7. В каком соборе находится рака с мощами святителя Тихона, Патриарха Всероссийского?</p>
+    </div>
+<!-- 8 -->
+    <div class="hidden_quest" style="display: none" data-quest="8">
+            <p>8. Какой храм считается первым шатровым каменным храмом в России?</p>
+    </div>
+<!-- 9 -->
+    <div class="hidden_quest" style="display: none" data-quest="9">
+            <p>9. В каком храме состоялся Земский собор, на котором в 1613 году был избран царем Михаил Романов?</p>
+    </div>
+<!-- 10 -->
+    <div class="hidden_quest" style="display: none" data-quest="10">
+            <p>10. Какой храм на Красной площади был снесен в 1936 году, а в 1990-1993 восстановлен на средства мэрии  и пожертвования москвичей?</p>
+    </div>
+<script>
+      QueryLoader.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pazzle</title>
+
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="author" content="Волгин Сергей">
+    <meta name="copyright" content="ООО Группа ЭПОС">
+    <meta name="Publisher-Email" content="info@eposgroup.ru">
+    <meta name="Publisher-URL" content="eposgroup.ru">
+	<meta name="HandheldFriendly" content="True"/>
+  	<link rel="stylesheet" type="text/css" href="css/queryLoader.css">
+<!--    <link rel="stylesheet" href="js/owl/owl.carousel.min.css">   -->
+	<link rel="stylesheet" href="css/pazzle.css">
+
+	<link href="css/source.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/game.css">
+
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/queryLoader.js"></script>
+    <script src="js/jquery.transit.min.js"></script>
+
+    <script src="js/hammer.js"></script>
+    <script src="js/jquery.hammer.js"></script>
+
+    <script src="js/jquery.nicescroll.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+    <script src="js/pazzle.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/redirect_timer.js"></script>  
+</head>
+<body id="body">
+   <div class="load_overfow" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgb(0, 0, 0); z-index: 10000; background-repeat: no-repeat; background-position: center;"> </div>
+    <div id="com_bg" class="img_background no_resize">
+        <img src="img/bg_puzzle.jpg">
+    </div>
+
+    <aside id="header" class="font_resizble">
+        <span>собери!</span>
+    </aside>
+    <aside style="clear: both"></aside>
+    <aside id="learn_more" class="font_resizble">
+        <span>о соборе</span>
+    </aside>
+
+    <div id="about_wrapper" class="font_resizble">
+        <div id="about">
+                                                                        <!-- 1 -->
+            <h1>ЦЕРКОВЬ ВОЗНЕСЕННИЯ ГОСПОДНЯ В КОЛОМЕНСКОМ</h1>
+            <p><b>Церковь Вознесения Господня в Коломенском</b> — признанный шедевр мировой архитектуры, первый шатровый каменный храм в России. Возведена в 1528-1532 годах  итальянским архитектором Петром Франциском Анибале, названным Петром Фрязиным или Петром Малым в русских летописях. Храм строился для моления о чадородии великокняжеской четы Василия III и Елены Глинской. После рождения Ивана IV Грозного в храме было возведено «царское место» на белокаменном основании. Первоначальное убранство храма не сохранилось. Храм был заново освещен в 2000 году.</p>
+
+            <img src="img/sobors/s_10_little.jpg">                      <!-- 2 -->
+        </div>
+        <div id="arrow_dop_panel" class="img_background no_resize">
+            <img src="img/arrow_dop_panel.png" >
+        </div>
+    </div>
+
+    <div id="puzzle_table" data-dir="img/puzzle_pieces/10/" data-sound="sound/01.mp3">     <!-- Путь к пазлам и саунду  -->    <!-- 3 -->
+        <div id="loading"> </div>
+        <div id="img_solved" data-img="img/sobors/s_10_little.jpg">     <!-- 4 -->
+<!--            <img src="img/sobors/s_02_little.jpg">    -->
+            <a href="pazzle_10.htm">                                    <!-- 5 -->
+                <div class="next_sign">сыграть заново</div>
+            </a>
+            <a href="pazzle_11.htm">                                    <!-- 6 -->
+                <div class="next_sign next">продолжить</div>
+            </a>
+            <p>Читай описание, чтобы проити тест "Проверь себя"</p>
+        </div>
+    </div>
+
+    <a href="index.htm">
+    <div id="home">
+        <img src="img/home.png">
+    </div>
+    </a>
+
+<script type="text/javascript">
+<!--
+$(function() {
+	// load game with small delay, to avoid bug in android browsers:
+	// http://stackoverflow.com/questions/5021090/screen-width-android/5994467#5994467
+	setTimeout(
+		game.load(
+			'where_tahrs_live',
+			3,
+			4,
+			'../puzzle/?where_tahrs_live'
+		), 333);
+});
+
+//-->
+</script>
+<script>
+      QueryLoader.init();
+</script>
+</body>
+</html>
