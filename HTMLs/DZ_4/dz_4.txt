@@ -10,7 +10,7 @@
                 'summary' => ['Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.', 'Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.']
             ];
 
-			for ($i = 0; $i < 3; $i++) {
+	   for ($i = 0; $i < 3; $i++) {
               print('
                 <div class="w3-container">
                   <h5 class="w3-opacity"><b>' . $data_experience['post'][$i] . '</b></h5>
