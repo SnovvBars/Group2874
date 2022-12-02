@@ -1,0 +1,45 @@
+<!-- Начало блока ДЗ PHP-->
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Опыт работы</h2>
+
+
+        <?php
+            $data_experience = [
+                'post' => ['Front End Developer', 'Web Developer / something.com', 'Graphic Designer / designsomething.com'],
+                'time_post' => ['Jan 2015 - <span class="w3-tag w3-teal w3-round">Current</span>', 'Mar 2012 - Dec 2014', 'Jun 2010 - Mar 2012'],
+                'summary' => ['Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.', 'Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.']
+            ];
+
+			for ($i = 0; $i < 3; $i++) {
+              print('
+                <div class="w3-container">
+                  <h5 class="w3-opacity"><b>' . $data_experience['post'][$i] . '</b></h5>
+                  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>' . $data_experience['time_post'][$i] . '</h6>
+                  <p>' . $data_experience['summary'][$i] . '</p>
+                  <hr>
+                </div>
+              ');}
+        ?>
+
+<!-- Конец блока ДЗ PHP -->
+
+** MySQL **
+
+-- create
+CREATE TABLE EMPLOYEE (
+  empId INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  age INTEGER NOT NULL,
+  address TEXT NOT NULL
+);
+
+-- insert
+INSERT INTO EMPLOYEE VALUES (0001, 'Иван', '18', 'Москва, Кремль');
+INSERT INTO EMPLOYEE VALUES (0002, 'Петр', '22', 'Питер, Зимний');
+INSERT INTO EMPLOYEE VALUES (0003, 'Анна', '35', 'Новгород, Старая площадь');
+INSERT INTO EMPLOYEE VALUES (0004, 'Кузьма', '40', 'Киев, Майдан');
+INSERT INTO EMPLOYEE VALUES (0005, 'Виктор', '15', 'Самара, Набережная');
+-- fetch 
+SELECT * FROM EMPLOYEE;
+
+**
